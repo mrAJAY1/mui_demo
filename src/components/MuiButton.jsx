@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Stack, Button, IconButton } from "@mui/material";
+import { Stack, Button, IconButton, ButtonGroup } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 
 function MuiButton() {
@@ -75,6 +75,22 @@ function MuiButton() {
         <IconButton aria-label="send" color="success" size="small">
           <SendIcon />
         </IconButton>
+      </Stack>
+      <Stack direction="row">
+        {/* This code creates a ButtonGroup component with 3 Button components
+        inside it.  The variant prop is set to "outlined" which gives the
+        buttons a bordered appearance. */}
+        <ButtonGroup
+          variant="outlined"
+          orientation="vertical"
+          size="small"
+          color="secondary"
+          aria-label="alignment button group"
+        >
+          <Button>Left</Button>
+          <Button>Center</Button>
+          <Button>Right</Button>
+        </ButtonGroup>
       </Stack>
     </Stack>
   );
