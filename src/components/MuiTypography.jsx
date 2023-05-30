@@ -24,16 +24,14 @@ function MuiTypography() {
       {/* p is the default element for body variants */}
       <Typography variant="body1" gutterBottom>
         {/* body1 is the default variant for typography */}
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed aliquid
-        quam, totam, tempore impedit obcaecati hic voluptatem ex, inventore
-        eaque veritatis corrupti? Debitis, porro officia. Repudiandae quae
-        incidunt commodi facere.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed aliquid quam, totam, tempore
+        impedit obcaecati hic voluptatem ex, inventore eaque veritatis corrupti? Debitis, porro
+        officia. Repudiandae quae incidunt commodi facere.
       </Typography>
       <Typography variant="body2" marginBottom="10px">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-        tempora itaque fuga dolore dignissimos labore dolores similique, a animi
-        sed exercitationem unde sequi ea. Tenetur quae veniam possimus corrupti
-        ullam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam tempora itaque fuga dolore
+        dignissimos labore dolores similique, a animi sed exercitationem unde sequi ea. Tenetur quae
+        veniam possimus corrupti ullam.
       </Typography>
     </div>
   );

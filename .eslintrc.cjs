@@ -12,7 +12,7 @@ module.exports = {
   plugins: ["react-refresh", "prettier"],
   rules: {
     "react-refresh/only-export-components": "warn",
-    "react/react-in-jsx-scope": "off",
-    "prettier/prettier": "error",
+    "prettier/prettier": ["error", { printWidth: 100 }],
+    "react/jsx-filename-extension": 0,
   },
 };

@@ -1,10 +1,10 @@
+import React, { useState } from "react";
 import { BottomNavigation, BottomNavigationAction } from "@mui/material";
 import TextFieldsIcon from "@mui/icons-material/TextFields";
 import SmartButtonIcon from "@mui/icons-material/SmartButton";
-import { useState } from "react";
 import MuiTypography from "./components/MuiTypography";
 import "./App.css";
-import MuiButton from "./components/MuiButton";
+import MuiButton from "./components/MuiButton.tsx";
 // This is the App component that returns some JSX to be rendered.
 function App() {
   // Here we are defining a state variable called "value" and its corresponding update function "setValue"

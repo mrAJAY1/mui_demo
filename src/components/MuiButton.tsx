@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 
-import { Stack, Button, IconButton, ButtonGroup } from "@mui/material";
+import {
+  Stack,
+  Button,
+  IconButton,
+  ButtonGroup,
+  ToggleButtonGroup,
+  ToggleButton,
+  Typography,
+} from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
+import FormatBoldIcon from "@mui/icons-material/FormatBold";
+import FormatItalicIcon from "@mui/icons-material/FormatItalic";
+import FormatUnderlinedIcon from "@mui/icons-material/FormatUnderlined";
 
 function MuiButton() {
+  const [format, setFormat] = useState<string[]>([]);
+  const handleFormatChange = (_event: React.MouseEvent<HTMLElement>, updatedFormats: string[]) => {
+    setFormat(updatedFormats);
+  };
+  console.log(format);
   return (
     /* Stack is a layout component provided by Material-UI that allows you to easily
      stack multiple components on top of each other. It simplifies the process of vertically 
@@ -11,11 +27,7 @@ function MuiButton() {
     <Stack spacing={4}>
       <Stack spacing={2} direction="row">
         {/* Button has the features of anchor tag */}
-        <Button
-          variant="contained"
-          href="https://www.google.com"
-          target="_blank"
-        >
+        <Button variant="contained" href="https://www.google.com" target="_blank">
           contained{" "}
         </Button>
         <Button variant="text">Text</Button>
@@ -62,12 +74,7 @@ function MuiButton() {
           Send
         </Button>
         {/* disable elevation, disable ripple  */}
-        <Button
-          variant="contained"
-          disableElevation
-          disableRipple
-          endIcon={<SendIcon />}
-        >
+        <Button variant="contained" disableElevation disableRipple endIcon={<SendIcon />}>
           {" "}
           Send
         </Button>
@@ -77,6 +84,7 @@ function MuiButton() {
         </IconButton>
       </Stack>
       <Stack direction="row">
+        {/* ButtonGroup */}
         {/* This code creates a ButtonGroup component with 3 Button components
         inside it.  The variant prop is set to "outlined" which gives the
         buttons a bordered appearance. */}
@@ -91,6 +99,36 @@ function MuiButton() {
           <Button>Center</Button>
           <Button>Right</Button>
         </ButtonGroup>
+      </Stack>
+      <Stack direction="column" spacing={2}>
+        {/* ToggleButtonGroup  */}
+        <ToggleButtonGroup
+          aria-label="text formatting"
+          value={format}
+          color="primary"
+          onChange={handleFormatChange}
+          //  exclusive - this will allow user to select only one at a time. the state
+          //  type should be changed to string | null accordingly
+        >
+          <ToggleButton value="bold" aria-label="bold">
+            <FormatBoldIcon />
+          </ToggleButton>
+          <ToggleButton value="italic" aria-label="italic">
+            <FormatItalicIcon />
+          </ToggleButton>
+          <ToggleButton value="underline" aria-label="underline">
+            <FormatUnderlinedIcon />
+          </ToggleButton>
+        </ToggleButtonGroup>
+        <Typography
+          sx={{
+            textDecoration: `${format.includes("underline") && "underline"}`,
+            fontStyle: `${format.includes("italic") && "italic"}`,
+            fontWeight: `${format.includes("bold") && "bold"}`,
+          }}
+        >
+          This is the sample text
+        </Typography>
       </Stack>
     </Stack>
   );
