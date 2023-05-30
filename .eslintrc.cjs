@@ -14,6 +14,5 @@ module.exports = {
     "react-refresh/only-export-components": "warn",
     "react/react-in-jsx-scope": "off",
     "prettier/prettier": "error",
-    "react/jsx-one-expression-per-line": "off",
   },
 };
