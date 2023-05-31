@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { BottomNavigation, BottomNavigationAction } from "@mui/material";
 import TextFieldsIcon from "@mui/icons-material/TextFields";
 import SmartButtonIcon from "@mui/icons-material/SmartButton";
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import TitleIcon from "@mui/icons-material/Title";
-import { MuiTypography, MuiButton, MuiTextField } from "./components";
+import { MuiTypography, MuiButton, MuiTextField, MuiSelect } from "./components";
 import "./App.css";
 // This is the App component that returns some JSX to be rendered.
 function App() {
@@ -15,6 +16,7 @@ function App() {
     { component: <MuiTypography />, icon: <TitleIcon />, label: "Typography" },
     { component: <MuiButton />, icon: <SmartButtonIcon />, label: "Button" },
     { component: <MuiTextField />, icon: <TextFieldsIcon />, label: "Text field" },
+    { component: <MuiSelect />, icon: <CheckCircleOutlineIcon />, label: "Select" },
   ];
   // This component returns an array of JSX elements which will be rendered on the page
   return (
