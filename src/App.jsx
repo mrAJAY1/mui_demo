@@ -4,7 +4,16 @@ import TextFieldsIcon from "@mui/icons-material/TextFields";
 import SmartButtonIcon from "@mui/icons-material/SmartButton";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import TitleIcon from "@mui/icons-material/Title";
-import { MuiTypography, MuiButton, MuiTextField, MuiSelect } from "./components";
+import CheckBoxOutlinedIcon from "@mui/icons-material/CheckBoxOutlined";
+import RadioButtonCheckedOutlinedIcon from "@mui/icons-material/RadioButtonCheckedOutlined";
+import {
+  MuiTypography,
+  MuiButton,
+  MuiTextField,
+  MuiSelect,
+  MuiCheckBox,
+  MuiRadio,
+} from "./components";
 import "./App.css";
 // This is the App component that returns some JSX to be rendered.
 function App() {
@@ -17,6 +26,8 @@ function App() {
     { component: <MuiButton />, icon: <SmartButtonIcon />, label: "Button" },
     { component: <MuiTextField />, icon: <TextFieldsIcon />, label: "Text field" },
     { component: <MuiSelect />, icon: <CheckCircleOutlineIcon />, label: "Select" },
+    { component: <MuiCheckBox />, icon: <CheckBoxOutlinedIcon />, label: "Check Box" },
+    { component: <MuiRadio />, icon: <RadioButtonCheckedOutlinedIcon />, label: "Radio Button" },
   ];
   // This component returns an array of JSX elements which will be rendered on the page
   return (

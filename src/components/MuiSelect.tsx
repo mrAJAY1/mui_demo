@@ -1,4 +1,4 @@
-import { Box, TextField, MenuItem, Stack, Typography } from "@mui/material";
+import { TextField, MenuItem, Stack, Typography } from "@mui/material";
 import React, { useState } from "react";
 
 function MuiSelect() {
@@ -14,8 +14,8 @@ function MuiSelect() {
   };
 
   return (
-    <Stack width={250} spacing={3}>
-      <Stack>
+    <Stack spacing={3}>
+      <Stack width={250}>
         <Typography variant="h6">Multiple select</Typography>
         {/* Multi select */}
         <TextField
@@ -36,7 +36,7 @@ function MuiSelect() {
         </TextField>
       </Stack>
       <hr />
-      <Stack>
+      <Stack width={250}>
         <TextField label="Select country" select value={country} onChange={handleChange2} fullWidth>
           <MenuItem value="IN">India</MenuItem>
           <MenuItem value="US">USA</MenuItem>
