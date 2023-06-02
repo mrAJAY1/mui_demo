@@ -1,4 +1,12 @@
-import { Box, FormControlLabel, Checkbox, FormControl, FormLabel, FormGroup } from "@mui/material";
+import {
+  Box,
+  FormControlLabel,
+  Checkbox,
+  FormControl,
+  FormLabel,
+  FormGroup,
+  FormHelperText,
+} from "@mui/material";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import React, { useState } from "react";
@@ -73,6 +81,51 @@ function MuiCheckBox() {
               label="CSS"
             />
           </FormGroup>
+        </FormControl>
+      </Box>
+      <Box>
+        {/* More props */}
+        {/* error */}
+        <FormControl error>
+          <FormLabel>Skills</FormLabel>
+          {/* row */}
+          <FormGroup row>
+            <FormControlLabel
+              // size, color
+              control={
+                <Checkbox
+                  value="html"
+                  size="small"
+                  color="secondary"
+                  onChange={handleSkillChange}
+                  checked={skills.includes("html")}
+                />
+              }
+              label="HTML"
+            />{" "}
+            <FormControlLabel
+              control={
+                <Checkbox
+                  value="javascript"
+                  onChange={handleSkillChange}
+                  checked={skills.includes("javascript")}
+                />
+              }
+              label="javaScript"
+            />{" "}
+            <FormControlLabel
+              control={
+                <Checkbox
+                  value="css"
+                  onChange={handleSkillChange}
+                  checked={skills.includes("css")}
+                />
+              }
+              label="CSS"
+            />
+          </FormGroup>
+          {/* Form Helper */}
+          <FormHelperText>Inalid selection</FormHelperText>
         </FormControl>
       </Box>
     </Box>
