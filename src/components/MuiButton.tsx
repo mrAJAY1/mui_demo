@@ -9,10 +9,7 @@ import {
   ToggleButton,
   Typography,
 } from "@mui/material";
-import SendIcon from "@mui/icons-material/Send";
-import FormatBoldIcon from "@mui/icons-material/FormatBold";
-import FormatItalicIcon from "@mui/icons-material/FormatItalic";
-import FormatUnderlinedIcon from "@mui/icons-material/FormatUnderlined";
+import { SendIcon, FormatBoldIcon, FormatItalicIcon, FormatUnderlinedIcon } from "./icons/icons";
 
 function MuiButton() {
   const [format, setFormat] = useState<string[]>([]);
@@ -90,7 +87,7 @@ function MuiButton() {
         buttons a bordered appearance. */}
         <ButtonGroup
           variant="outlined"
-          orientation="vertical"
+          orientation="horizontal"
           size="small"
           color="secondary"
           aria-label="alignment button group"

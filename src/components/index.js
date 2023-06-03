@@ -5,3 +5,4 @@ export { default as MuiSelect } from "./MuiSelect.tsx";
 export { default as MuiCheckBox } from "./MuiCheckBox.tsx";
 export { default as MuiRadio } from "./MuiRadio.tsx";
 export { default as MuiSwitch } from "./MuiSwitch.tsx";
+export { default as MuiRating } from "./MuiRating.tsx";

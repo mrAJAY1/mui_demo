@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { InputAdornment, Stack, TextField } from "@mui/material";
-import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
-import VisibilityOffOutlinedIcon from "@mui/icons-material/VisibilityOffOutlined";
+import { RemoveRedEyeOutlinedIcon, VisibilityOffOutlinedIcon } from "./icons/icons";
 
 function MuiTextField() {
   const [isVisible, setIsVisible] = useState<boolean>(false);

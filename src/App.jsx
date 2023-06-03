@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import { BottomNavigation, BottomNavigationAction } from "@mui/material";
-import TextFieldsIcon from "@mui/icons-material/TextFields";
-import SmartButtonIcon from "@mui/icons-material/SmartButton";
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
-import TitleIcon from "@mui/icons-material/Title";
-import CheckBoxOutlinedIcon from "@mui/icons-material/CheckBoxOutlined";
-import RadioButtonCheckedOutlinedIcon from "@mui/icons-material/RadioButtonCheckedOutlined";
-import ToggleOnIcon from "@mui/icons-material/ToggleOn";
+
 import {
   MuiTypography,
   MuiButton,
@@ -15,8 +9,19 @@ import {
   MuiCheckBox,
   MuiRadio,
   MuiSwitch,
+  MuiRating,
 } from "./components";
 import "./App.css";
+import {
+  CheckBoxOutlinedIcon,
+  CheckCircleOutlineIcon,
+  GradeIcon,
+  RadioButtonCheckedOutlinedIcon,
+  SmartButtonIcon,
+  TextFieldsIcon,
+  TitleIcon,
+  ToggleOnIcon,
+} from "./components/icons/icons";
 // This is the App component that returns some JSX to be rendered.
 function App() {
   // Here we are defining a state variable called "value" and its corresponding update function "setValue"
@@ -31,6 +36,7 @@ function App() {
     { component: <MuiCheckBox />, icon: <CheckBoxOutlinedIcon />, label: "Check Box" },
     { component: <MuiRadio />, icon: <RadioButtonCheckedOutlinedIcon />, label: "Radio Button" },
     { component: <MuiSwitch />, icon: <ToggleOnIcon />, label: "Switch" },
+    { component: <MuiRating />, icon: <GradeIcon />, label: "Rating" },
   ];
   // This component returns an array of JSX elements which will be rendered on the page
   return (
