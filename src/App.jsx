@@ -30,7 +30,7 @@ function App() {
     { component: <MuiSelect />, icon: <CheckCircleOutlineIcon />, label: "Select" },
     { component: <MuiCheckBox />, icon: <CheckBoxOutlinedIcon />, label: "Check Box" },
     { component: <MuiRadio />, icon: <RadioButtonCheckedOutlinedIcon />, label: "Radio Button" },
-    { component: <MuiSwitch />, icon: <ToggleOnIcon />, label: "Radio Button" },
+    { component: <MuiSwitch />, icon: <ToggleOnIcon />, label: "Switch" },
   ];
   // This component returns an array of JSX elements which will be rendered on the page
   return (
