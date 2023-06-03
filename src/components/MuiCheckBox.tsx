@@ -7,9 +7,8 @@ import {
   FormGroup,
   FormHelperText,
 } from "@mui/material";
-import BookmarkIcon from "@mui/icons-material/Bookmark";
-import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import React, { useState } from "react";
+import { BookmarkIcon, BookmarkBorderIcon } from "./icons/icons.jsx";
 
 function MuiCheckBox() {
   const [acceptTnC, setAcceptTnC] = useState<boolean>(false);
