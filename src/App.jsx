@@ -6,6 +6,7 @@ import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import TitleIcon from "@mui/icons-material/Title";
 import CheckBoxOutlinedIcon from "@mui/icons-material/CheckBoxOutlined";
 import RadioButtonCheckedOutlinedIcon from "@mui/icons-material/RadioButtonCheckedOutlined";
+import ToggleOnIcon from "@mui/icons-material/ToggleOn";
 import {
   MuiTypography,
   MuiButton,
@@ -13,6 +14,7 @@ import {
   MuiSelect,
   MuiCheckBox,
   MuiRadio,
+  MuiSwitch,
 } from "./components";
 import "./App.css";
 // This is the App component that returns some JSX to be rendered.
@@ -28,6 +30,7 @@ function App() {
     { component: <MuiSelect />, icon: <CheckCircleOutlineIcon />, label: "Select" },
     { component: <MuiCheckBox />, icon: <CheckBoxOutlinedIcon />, label: "Check Box" },
     { component: <MuiRadio />, icon: <RadioButtonCheckedOutlinedIcon />, label: "Radio Button" },
+    { component: <MuiSwitch />, icon: <ToggleOnIcon />, label: "Radio Button" },
   ];
   // This component returns an array of JSX elements which will be rendered on the page
   return (
