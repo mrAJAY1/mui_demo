@@ -1,8 +1,53 @@
-import { FormControl, FormControlLabel, Rating, Stack } from "@mui/material";
+import { FormControl, FormControlLabel, Stack, styled } from "@mui/material";
+import Rating, { IconContainerProps } from "@mui/material/Rating";
+
 import { FavoriteBorder, Favorite } from "@mui/icons-material";
+import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
+import SentimentDissatisfiedIcon from "@mui/icons-material/SentimentDissatisfied";
+import SentimentSatisfiedIcon from "@mui/icons-material/SentimentSatisfied";
+import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAltOutlined";
+import SentimentVerySatisfiedIcon from "@mui/icons-material/SentimentVerySatisfied";
 
 import React, { useState } from "react";
 
+const StyledRating = styled(Rating)(({ theme }) => ({
+  "& .MuiRating-iconEmpty .MuiSvgIcon-root": {
+    color: theme.palette.action.disabled,
+  },
+}));
+
+const customIcons: {
+  [index: string]: {
+    icon: React.ReactElement;
+    label: string;
+  };
+} = {
+  1: {
+    icon: <SentimentVeryDissatisfiedIcon color="error" />,
+    label: "Very Dissatisfied",
+  },
+  2: {
+    icon: <SentimentDissatisfiedIcon color="error" />,
+    label: "Dissatisfied",
+  },
+  3: {
+    icon: <SentimentSatisfiedIcon color="warning" />,
+    label: "Neutral",
+  },
+  4: {
+    icon: <SentimentSatisfiedAltIcon color="success" />,
+    label: "Satisfied",
+  },
+  5: {
+    icon: <SentimentVerySatisfiedIcon color="success" />,
+    label: "Very Satisfied",
+  },
+};
+
+function IconContainer(props: IconContainerProps) {
+  const { value, ...other } = props;
+  return <span {...other}>{customIcons[value].icon}</span>;
+}
 function MuiRating() {
   const [value, setValue] = useState<number | null>(3);
   const handleChange = (
@@ -41,28 +86,14 @@ function MuiRating() {
         <FormControlLabel
           label="Read Only"
           control={
-            <Rating
-              size="large"
+            <StyledRating
+              name="highlight-selected-only"
+              defaultValue={2}
               value={value}
-              precision={0.5}
-              onChange={handleChange}
-              icon={<Favorite fontSize="inherit" color="error" />}
-              emptyIcon={<FavoriteBorder fontSize="inherit" />}
-              readOnly
-            />
-          }
-        />
-        <FormControlLabel
-          label="HighLight Selected Only"
-          control={
-            <Rating
-              size="large"
-              value={value}
-              precision={0.5}
-              onChange={handleChange}
-              icon={<Favorite fontSize="inherit" color="error" />}
-              emptyIcon={<FavoriteBorder fontSize="inherit" />}
+              IconContainerComponent={IconContainer}
+              getLabelText={(value: number) => customIcons[value].label}
               highlightSelectedOnly
+              onChange={handleChange}
             />
           }
         />
