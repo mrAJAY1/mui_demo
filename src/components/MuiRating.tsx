@@ -46,6 +46,7 @@ const customIcons: {
 
 function IconContainer(props: IconContainerProps) {
   const { value, ...other } = props;
+  // eslint-disable-next-line react/jsx-props-no-spreading
   return <span {...other}>{customIcons[value].icon}</span>;
 }
 function MuiRating() {
@@ -91,7 +92,7 @@ function MuiRating() {
               defaultValue={2}
               value={value}
               IconContainerComponent={IconContainer}
-              getLabelText={(value: number) => customIcons[value].label}
+              getLabelText={(count: number) => customIcons[count].label}
               highlightSelectedOnly
               onChange={handleChange}
             />
