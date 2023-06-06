@@ -17,3 +17,4 @@ export { default as BookmarkBorderIcon } from "@mui/icons-material/BookmarkBorde
 
 export { default as RemoveRedEyeOutlinedIcon } from "@mui/icons-material/RemoveRedEyeOutlined";
 export { default as VisibilityOffOutlinedIcon } from "@mui/icons-material/VisibilityOffOutlined";
+export { AutoAwesome } from "@mui/icons-material";
