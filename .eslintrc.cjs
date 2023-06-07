@@ -14,5 +14,6 @@ module.exports = {
     "react-refresh/only-export-components": "warn",
     "prettier/prettier": ["error", { printWidth: 100 }],
     "react/jsx-filename-extension": 0,
+    "react/jsx-props-no-spreading": 0,
   },
 };

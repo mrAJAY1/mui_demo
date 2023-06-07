@@ -48,27 +48,31 @@ function App() {
       {menuItems[value].component}
 
       {/* We are rendering a BottomNavigation component from Material-UI */}
-      <BottomNavigation
-        sx={{
-          width: "100%",
-          position: "absolute",
-          background: "#98dcf7",
+      <div
+        style={{
+          overflowX: "scroll",
           bottom: 0,
           left: "50%",
           transform: "translate(-50%,0)",
-        }}
-        showLabels
-        value={value}
-        // The onChange event will update the state variable "value" when the user interacts with the BottomNavigation
-        onChange={(event, newValue) => {
-          setValue(newValue);
+          width: "100%",
+          position: "absolute",
         }}
       >
-        {/* The BottomNavigationAction components display icons and labels to represent different sections of the app */}
-        {menuItems.map((item) => (
-          <BottomNavigationAction label={item.label} icon={item.icon} />
-        ))}
-      </BottomNavigation>
+        <BottomNavigation
+          sx={{ background: "#98dcf7", width: "100%" }}
+          showLabels
+          value={value}
+          // The onChange event will update the state variable "value" when the user interacts with the BottomNavigation
+          onChange={(event, newValue) => {
+            setValue(newValue);
+          }}
+        >
+          {/* The BottomNavigationAction components display icons and labels to represent different sections of the app */}
+          {menuItems.map((item) => (
+            <BottomNavigationAction label={item.label} icon={item.icon} />
+          ))}
+        </BottomNavigation>
+      </div>
     </>
   );
 }
