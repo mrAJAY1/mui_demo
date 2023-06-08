@@ -48,6 +48,7 @@ function App() {
     { component: <MuiAutoComplete />, icon: <AutoAwesome />, label: "AutoComplete" },
     { component: <MuiLayout />, icon: <DashboardIcon />, label: "Layout" },
     { component: <MuiSurface />, icon: <LayersIcon />, label: "Surface" },
+    { component: <MuiAccordion />, icon: <ExpandMore />, label: "Accordion" },
   ];
   // This component returns an array of JSX elements which will be rendered on the page
   return (
