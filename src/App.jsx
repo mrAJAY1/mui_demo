@@ -13,6 +13,7 @@ import {
   MuiAutoComplete,
   MuiLayout,
   MuiSurface,
+  MuiAccordion,
 } from "./components";
 import "./App.css";
 import {
@@ -28,6 +29,7 @@ import {
   DashboardIcon,
   LayersIcon,
 } from "./components/icons/icons";
+import { ExpandMore } from "@mui/icons-material";
 // This is the App component that returns some JSX to be rendered.
 function App() {
   // Here we are defining a state variable called "value" and its corresponding update function "setValue"

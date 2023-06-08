@@ -1,9 +1,21 @@
-import { Box, Card, CardContent, Divider, Grid, Paper, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Divider,
+  Grid,
+  Paper,
+  Stack,
+  Typography,
+} from "@mui/material";
 import React from "react";
 
 function MuiSurface() {
   return (
-    <Stack px={20} pt={4}>
+    <Stack px={{ xs: 5, sm: 10, md: 30, lg: 40 }} pt={4} mb={10}>
       {/* paper is a surface related component which is used to provide vision heirarchy */}
       <Paper
         elevation={4}
@@ -92,6 +104,26 @@ function MuiSurface() {
           </Grid>
         </Grid>
       </Paper>
+      <Box width={350} mt={5}>
+        <Card>
+          {" "}
+          <CardMedia component="img" height={140} image="https://picsum.photos/500" />
+          <CardContent>
+            {" "}
+            <Typography gutterBottom variant="h5" component="div">
+              React
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, omnis commodi? Numquam
+              dolores fuga delectus hic laudantium unde assumenda ducimus doloremque?
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button size="small">Share</Button>
+            <Button size="small">Learn More</Button>
+          </CardActions>
+        </Card>
+      </Box>
     </Stack>
   );
 }
