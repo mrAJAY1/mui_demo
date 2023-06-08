@@ -11,6 +11,7 @@ import {
   MuiSwitch,
   MuiRating,
   MuiAutoComplete,
+  MuiLayout,
 } from "./components";
 import "./App.css";
 import {
@@ -23,6 +24,7 @@ import {
   TitleIcon,
   ToggleOnIcon,
   AutoAwesome,
+  DashboardIcon,
 } from "./components/icons/icons";
 // This is the App component that returns some JSX to be rendered.
 function App() {
@@ -40,6 +42,7 @@ function App() {
     { component: <MuiSwitch />, icon: <ToggleOnIcon />, label: "Switch" },
     { component: <MuiRating />, icon: <GradeIcon />, label: "Rating" },
     { component: <MuiAutoComplete />, icon: <AutoAwesome />, label: "AutoComplete" },
+    { component: <MuiLayout />, icon: <DashboardIcon />, label: "Layout" },
   ];
   // This component returns an array of JSX elements which will be rendered on the page
   return (
