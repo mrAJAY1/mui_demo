@@ -74,9 +74,9 @@ function MuiLayout() {
           </Box>
         </Grid>
       </Grid>
-      <Divider orientation="horizontal" />
+      <Divider sx={{ m: 2 }} orientation="horizontal" />
       {/*  different width for different breakpoints */}
-      <Grid container mt={3} rowSpacing={2} columnSpacing={3}>
+      <Grid container mt={3} width="100%" ml={0} rowSpacing={2} columnSpacing={3}>
         <Grid item sx={{ border: "1px solid" }} xs={6}>
           <Box p={2} bgcolor="primary.light">
             Item 1
@@ -88,18 +88,19 @@ function MuiLayout() {
           </Box>
         </Grid>
         {/* just specifying the breakpoints occupies the remaing space in the row */}
-        <Grid item sx={{ border: "1px solid" }} xs={6}>
+        <Grid item sx={{ border: "1px solid" }} xs="auto">
           <Box p={2} bgcolor="primary.light">
             Item 3
           </Box>
         </Grid>
         {/* breakpoint="auto" only takes the content width */}
-        <Grid item sx={{ border: "1px solid" }} xs="auto">
+        <Grid item sx={{ border: "1px solid" }} xs>
           <Box p={2} bgcolor="primary.light">
             Item 4
           </Box>
         </Grid>
       </Grid>
+      <Divider sx={{ m: 2 }} />
     </>
   );
 }

@@ -17,4 +17,4 @@ export { default as BookmarkBorderIcon } from "@mui/icons-material/BookmarkBorde
 
 export { default as RemoveRedEyeOutlinedIcon } from "@mui/icons-material/RemoveRedEyeOutlined";
 export { default as VisibilityOffOutlinedIcon } from "@mui/icons-material/VisibilityOffOutlined";
-export { AutoAwesome, Dashboard as DashboardIcon } from "@mui/icons-material";
+export { AutoAwesome, Dashboard as DashboardIcon, Layers as LayersIcon } from "@mui/icons-material";
