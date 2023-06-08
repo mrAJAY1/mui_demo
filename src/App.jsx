@@ -56,12 +56,14 @@ function App() {
           overflowX: "auto",
           bottom: 0,
           left: 0,
-          width: "100vw",
+          width: "100%",
+          background: "#98dcf7",
           position: "fixed",
+          display: "flex",
         }}
       >
         <BottomNavigation
-          sx={{ background: "#98dcf7", width: "fit-content", justifyContent: "flex-start" }}
+          sx={{ background: "inherit", width: "fit-content", mx: "auto" }}
           showLabels
           value={value}
           // The onChange event will update the state variable "value" when the user interacts with the BottomNavigation
