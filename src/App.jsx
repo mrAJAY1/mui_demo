@@ -53,16 +53,15 @@ function App() {
       {/* We are rendering a BottomNavigation component from Material-UI */}
       <div
         style={{
-          overflowX: "scroll",
+          overflowX: "auto",
           bottom: 0,
-          left: "50%",
-          transform: "translate(-50%,0)",
-          width: "100%",
-          position: "absolute",
+          left: 0,
+          width: "100vw",
+          position: "fixed",
         }}
       >
         <BottomNavigation
-          sx={{ background: "#98dcf7", width: "100%" }}
+          sx={{ background: "#98dcf7", width: "fit-content", justifyContent: "flex-start" }}
           showLabels
           value={value}
           // The onChange event will update the state variable "value" when the user interacts with the BottomNavigation
