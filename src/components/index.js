@@ -8,3 +8,4 @@ export { default as MuiSwitch } from "./MuiSwitch.tsx";
 export { default as MuiRating } from "./MuiRating.tsx";
 export { default as MuiAutoComplete } from "./MuiAutoComplete.tsx";
 export { default as MuiLayout } from "./MuiLayout.tsx";
+export { default as MuiSurface } from "./MuiSurface.tsx";
