@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BottomNavigation, BottomNavigationAction } from "@mui/material";
+import { ExpandMore } from "@mui/icons-material";
 
 import {
   MuiTypography,
@@ -14,6 +15,7 @@ import {
   MuiLayout,
   MuiSurface,
   MuiAccordion,
+  MuiImageList,
 } from "./components";
 import "./App.css";
 import {
@@ -28,8 +30,8 @@ import {
   AutoAwesome,
   DashboardIcon,
   LayersIcon,
+  ImageIcon,
 } from "./components/icons/icons";
-import { ExpandMore } from "@mui/icons-material";
 // This is the App component that returns some JSX to be rendered.
 function App() {
   // Here we are defining a state variable called "value" and its corresponding update function "setValue"
@@ -49,6 +51,7 @@ function App() {
     { component: <MuiLayout />, icon: <DashboardIcon />, label: "Layout" },
     { component: <MuiSurface />, icon: <LayersIcon />, label: "Surface" },
     { component: <MuiAccordion />, icon: <ExpandMore />, label: "Accordion" },
+    { component: <MuiImageList />, icon: <ImageIcon />, label: "ImageList" },
   ];
   // This component returns an array of JSX elements which will be rendered on the page
   return (
